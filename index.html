@@ -509,22 +509,26 @@ figcaption{ margin-top:.8rem; color:var(--mute); font-weight:600; }
 
       <div class="slider" role="region" aria-label="Testimonials">
         <figure class="slide active">
-          <blockquote>“The letter I received during a hard week reminded me that I wasn’t alone.”</blockquote>
-          <figcaption>Sarah — L.A.</figcaption>
+          <blockquote>"It's a great community and the meetings we do are always so fun. The room is always filled with conversations, laughter, bonding, and everyone is constantly enjoying themselves. It's rewarding to have such a great time after dealing with school the whole day while also helping others! The book drive is one of wonderful activities we do and giving back to your community is truly a gift like no other!"</blockquote>
+          <figcaption>Melody V. — Long Beach</figcaption>
         </figure>
         <figure class="slide">
-          <blockquote>“Volunteering showed me how a few kind words can change someone’s day.”</blockquote>
-          <figcaption>Michael — Fullerton</figcaption>
+          <blockquote>“Serving as president of Love Through the Lines this year has been such an eye-opening experience. One of my favorite moments was organizing our annual book drive. We collected over 200 books for kids in Title 1 schools, and it was incredible to see how quickly our members stepped up. Everyone was so eager to help, whether it was sorting donations, or just spreading the word. It reminded me that even in a busy school year, people want to make a difference.”</blockquote>
+          <figcaption>Lily H. — La Habra</figcaption>
         </figure>
+        <!--
         <figure class="slide">
           <blockquote>“The books and notes helped my daughter through treatment. Thank you for caring.”</blockquote>
           <figcaption>Maria — Brea</figcaption>
         </figure>
+        -->
 
         <div class="dots" aria-label="Select testimonial">
           <button class="dot active" aria-label="Slide 1"></button>
           <button class="dot" aria-label="Slide 2"></button>
+          <!--
           <button class="dot" aria-label="Slide 3"></button>
+          -->
         </div>
       </div>
     </div>
@@ -657,7 +661,7 @@ function animateCounters() {
     const step = (now) => {
       const progress = Math.min((now - start) / duration, 1);
       const value = Math.floor(progress * target);
-      numEl.textContent = value.toLocaleString() + (target >= 100 ? '+' : '');
+      numEl.textContent = value.toLocaleString() + (target >= 10 ? '+' : '');
       if (progress < 1) requestAnimationFrame(step);
     };
     requestAnimationFrame(step);
