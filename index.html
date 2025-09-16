@@ -178,12 +178,21 @@ h2{ font-size: clamp(1.8rem, 3.5vw, 2.6rem); line-height: 1.15; margin-bottom: .
   position:relative;
   display:flex; align-items:center; justify-content:center;
 }
-.portrait{
-  background: #fff; padding:14px; border-radius: 28px; box-shadow: var(--shadow-md);
+.portrait {
+  display: inline-block;       /* Shrink-wraps the container around the content */
+  background: #fff; 
+  padding: 14px; 
+  border-radius: 28px; 
+  box-shadow: var(--shadow-md);
   transform: rotate(-2deg);
 }
-.portrait img{
-  display:block; width:min(400px, 100%); height:auto; border-radius: 20px;
+
+.portrait img {
+  display: block; 
+  width: 100%;               /* Fill the parent width */
+  max-width: 400px;          /* But never bigger than 400px */
+  height: auto; 
+  border-radius: 20px;
 }
 .stamp{
   position:absolute; right:-12px; bottom:-14px;
